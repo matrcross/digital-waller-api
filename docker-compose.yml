@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  digital_wallet:
+    build: .
+    container_name: digital_wallet
+    restart: always
+    ports:
+      - "8080:8080"
