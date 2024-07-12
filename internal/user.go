@@ -9,3 +9,13 @@ type User struct {
 	UserType   string
 	Balance    float64
 }
+type Repository interface {
+	Get(id int) (*User, error)
+	Create(e User) (int, error)
+}
+
+type UseCase interface {
+	Get(id int) (*User, error)
+	Create(User) (*User, error)
+	Deposit(amount float64) (int, error)
+}
